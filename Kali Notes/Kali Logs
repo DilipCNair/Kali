@@ -1,0 +1,30 @@
+Softwares Installed :
+  Neofetch
+  Tree
+  Additional Missing Fonts
+  Bluetooth driver
+  Visual Studio Code
+  Oracle Virtual Box
+  Vmware Workstation Pro 16
+  Synaptic
+  XDM
+  gpick
+  pavucontrol
+  mlocate
+  
+
+ Dependencies Installed :
+   python3-pyside2.qtcore 
+   python3-pyside2.qtgui 
+   python3-pyside2.qtwidgets 
+   python3-pyside2.qtnetwork
+   
+   openjdk-14-jdk
+   python3-pip
+
+
+Configuration Changes :
+  Created keyboard shortcut for terminal
+  Created a symbolic link for brightness controller
+  Created keyboard shortcut for brightness controller
+  Activated bluetooth

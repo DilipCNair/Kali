@@ -1,0 +1,28 @@
+Sudo apt update
+Sudo apt upgrade
+
+uname -a
+lsb_release -a
+sudo apt full-upgrade -y
+
+sudo apt install python3-pip
+
+rm filename
+mv filename folder
+
+sudo apt install ./filename.deb
+
+timedatectl set-local-rtc 0 --adjust-system-clock
+
+xsltproc /path/to/file.xml -o /path/to/file2.html - To convert xml document to html document
+
+sudo make
+sudo make install
+
+sudo ln -sf ~/Programs/'Brightness Controller'/src/init.py /usr/local/bin/btc
+
+sudo /etc/init.d/bluetooth start
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
+
+sudo update-alternatives --config java

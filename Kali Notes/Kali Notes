@@ -1,0 +1,16 @@
+
+Root account 
+  username = root
+  password = 'mypassword'
+
+User account 
+  username = dilip
+  password = 'mypassword'
+  
+hostname/devicename = Hp-Pavilion
+domain name = www.dilip.com
+full name = Dilip C Nair  - which shows on the login screen
+
+Default text editor leafpad has been changed to mousepad
+Blueman is not working in kali
+

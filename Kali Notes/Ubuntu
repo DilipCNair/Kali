@@ -1,0 +1,26 @@
+Installing Tomcat 
+ sudo apt install tomcat9
+ service tomcat9 status
+ port 8080
+
+Ubuntu comes with telnet client, ftp and ssh client by default
+Telnet server, ftp server and ssh server can be installed through their repositories
+
+Installing telnet
+ sudo apt install telnetd
+ service inetd status
+ port 23
+
+Installing ftp server
+ sudo apt install vsftpd
+ service vsftpd status
+ port 21
+ ftp <ip-address>
+ ls  - remote
+ !ls - local
+ cd  - remote
+ lcd - local
+ get filename - download
+ mget <for multiple files> - download
+ put filename - upload
+ mput <for multiple files> - upload

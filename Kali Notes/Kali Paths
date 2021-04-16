@@ -1,0 +1,24 @@
+/sys/class/backlight/ - To change brightness configuration
+
+/etc/resolv.conf - To change DNS server - local and public 
+/etc/hosts - Private DNS server
+/etc/apt/sources.list - To add apt sources
+/etc/apt/source.list.d/ - To add apt sources as files
+
+/usr/lib/jvm/ - All your JDKs
+/usr/lib/ - All your python SDKs
+/usr/share/applications/ - All your application's desktop configuration files which will appear in the application menu of 
+                           the OS
+
+/media/ - All your external storage devices connected
+
+/opt/ - Some of your new applications resides here
+
+/home/dilip/.config/qterminal.org/qterminal.ini - To change terminal configuration
+/home/dilip/.fonts - To add additional fonts
+/home/dilip/.bashrc - To add environment variables to the terminal
+/home/dilip/.local/share/applications/ - Secondary place for you application's desktop configuration file which will appear 
+                                         in the application menu of the OS
+
+/usr/share/wordlists - All your brute forcing files                                        
+

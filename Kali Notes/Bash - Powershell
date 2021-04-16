@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------------------------------------------------------
+Bash                                Powershell
+-------------------------------------------------------------------------------------------------------------------------------
+man <any_command>                   Get-Help <any_command>
+echo <message>                      Write-Host "message"
+sudo                                Open powershell in admin mode
+pwd                                 Get-Location
+ls                                  Get-Childitem | dir
+cd <path>                           Set-Location <path> | cd
+touch <path-filename>               New-Item -Path <path-filename> -ItemType File
+mkdir <path-foldername>             New-Item -Path <path-filename> -ItemType Directory
+cp <path-folder-file>               Copy-Item <source path-folder-file> <destination path-folder-file>
+mv <path-folder-file>               Move-Item <source path-folder-file> <destination path-folder-file>
+mv (same for rename)                Rename-Item <path-folder-file>
+rm <path-folder-file>               Remove-Item <path-folder-file>
+cat <path-file>                     Get-Content <path-folder-file>
+test                                Test-Path <path-folder-file>
+ps                                  Get-Processes
+apt (comes pre-installed)           Install-Module PSWindowsUpdate
+apt update                          Get-WindowsUpdate
+apt upgrade                         Install-WindowsUpdate
+apt install <package_name>          Get-AppXPackage  and Add-AppxPackage 
+>                                   Set-Content <path-filename> 'Content'
