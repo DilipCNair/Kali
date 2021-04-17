@@ -21,6 +21,6 @@ apt (comes pre-installed)               Install-Module PSWindowsUpdate
 apt update                              Get-WindowsUpdate
 apt upgrade                             Install-WindowsUpdate
 apt install <package_name>              Get-AppXPackage  and Add-AppxPackage 
->                                       Set-Content <path-filename> 'Content'
+>                                       Set-Content & Add-Content <path-filename> 'Content'
 grep                                    Select-String
 
