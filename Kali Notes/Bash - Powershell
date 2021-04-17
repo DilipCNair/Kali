@@ -2,11 +2,11 @@
 Bash                                    Powershell
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bash --version                          Get-Host
-man <any_command>                       Get-Help <any_command>
-echo <message>                          Write-Host "message"
+man <any_command>                       Get-Help <any_command> or man
+echo <message>                          Write-Host "message" or echo
 sudo                                    Open powershell in admin mode
 pwd                                     Get-Location
-ls                                      Get-Childitem or dir
+ls                                      Get-Childitem or dir or ls
 cd <path>                               Set-Location <path> or cd
 touch <path-filename>                   New-Item -Path <path-filename> -ItemType File
 mkdir <path-foldername>                 New-Item -Path <path-filename> -ItemType Directory
