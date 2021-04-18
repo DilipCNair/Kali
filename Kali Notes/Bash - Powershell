@@ -14,13 +14,13 @@ cp <path-folder-file>                   Copy-Item <source path-folder-file> <des
 mv <path-folder-file>                   Move-Item <source path-folder-file> <destination path-folder-file>
 mv (same for rename)                    Rename-Item <path-folder-file>
 rm <path-folder-file>                   Remove-Item <path-folder-file>
-cat <path-file>                         Get-Content <path-folder-file>
 test                                    Test-Path <path-folder-file>
 ps                                      Get-Processes
 apt (comes pre-installed)               Install-Module PSWindowsUpdate
 apt update                              Get-WindowsUpdate
 apt upgrade                             Install-WindowsUpdate
-apt install <package_name>              Get-AppXPackage  and Add-AppxPackage 
->                                       Set-Content & Add-Content <path-filename> 'Content'
+apt install <package_name>              Get-AppXPackage and Add-AppxPackage
+cat <path-file>                         Get-Content <path-folder-file>
+> and >>                                Set-Content & Add-Content <path-filename> 'Content'
 grep                                    Select-String
 
