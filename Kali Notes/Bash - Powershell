@@ -24,3 +24,4 @@ cat <path-file>                         Get-Content <path-folder-file>
 > and >>                                Set-Content & Add-Content <path-filename> 'Content'
 grep                                    Select-String
 compgen                                 Get-Command
+
