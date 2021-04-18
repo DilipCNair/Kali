@@ -2,6 +2,7 @@
 Bash                                    Powershell
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bash --version                          Get-Host
+compgen                                 Get-Command
 man <any_command>                       Get-Help <any_command> or man
 echo <message>                          Write-Host "message" or echo
 sudo                                    Open powershell in admin mode
@@ -23,5 +24,5 @@ apt install <package_name>              Get-AppXPackage and Add-AppxPackage
 cat <path-file>                         Get-Content <path-folder-file>
 > and >>                                Set-Content & Add-Content <path-filename> 'Content'
 grep                                    Select-String
-compgen                                 Get-Command
+
 
