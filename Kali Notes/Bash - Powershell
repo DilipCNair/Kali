@@ -20,7 +20,8 @@ ps                                      Get-Processes
 apt (comes pre-installed)               Install-Module PSWindowsUpdate
 apt update                              Get-WindowsUpdate
 apt upgrade                             Install-WindowsUpdate
-apt install <package_name>              Get-AppXPackage and Add-AppxPackage
+apt-cache search <package-name>         Find-Package <package-name>
+apt install <package_name>              Install-Module <package-name>
 cat <path-file>                         Get-Content <path-folder-file>
 > and >>                                Set-Content & Add-Content <path-filename> 'Content'
 grep                                    Select-String
