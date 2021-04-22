@@ -3,12 +3,12 @@ Bash                                    Powershell
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bash --version                          Get-Host
 compgen -c                              Get-Command
-man <any_command>                       Get-Help <any_command> or man
+man <any_command>                       Get-Help <any_command> or man or help
 echo <message>                          Write-Host "message" or echo
 sudo                                    Open powershell in admin mode
 pwd                                     Get-Location
 ls                                      Get-Childitem or dir or ls
-cd <path>                               Set-Location <path> or cd
+cd <path>                               Set-Location <path> or cd or chdir
 touch <path-filename>                   New-Item -Path <path-filename> -ItemType File
 mkdir <path-foldername>                 New-Item -Path <path-filename> -ItemType Directory
 cp <path-folder-file>                   Copy-Item <source path-folder-file> <destination path-folder-file>
