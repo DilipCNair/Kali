@@ -25,5 +25,8 @@ apt install <package_name>              Install-Module <package-name>
 cat <path-file>                         Get-Content <path-folder-file>
 > and >>                                Set-Content & Add-Content <path-filename> 'Content'
 grep                                    Select-String
+set or env                              Get-Childitem env:
+reboot                                  Restart-Computer
+shutdown                                Stop-Computer
 
 
