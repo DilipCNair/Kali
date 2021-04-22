@@ -2,7 +2,7 @@
 Bash                                    Powershell
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bash --version                          Get-Host
-compgen                                 Get-Command
+compgen -c                              Get-Command
 man <any_command>                       Get-Help <any_command> or man
 echo <message>                          Write-Host "message" or echo
 sudo                                    Open powershell in admin mode
