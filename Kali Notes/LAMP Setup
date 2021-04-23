@@ -44,10 +44,11 @@ Setting up LAMP
    chmod 777 -R DVWA
    cp /var/www/html/config/config.inc.php.dist /var/www/html/config/config.inc.php to setup configuration file
    nano /var/www/html/DVWA/config/config.inc.php and setup database connection string
-   create a database and a user in mysql for DVWA
-   CREATE DATABASE dvwa_db;
-   CREATE USER 'dvwa'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Dvwa@1692';
-   GRANT ALL PRIVILEGES ON dvwa_db.* TO 'dvwa'@'localhost' WITH GRANT OPTION;
+   create a database and a user in mysql for DVWA :
+    CREATE DATABASE dvwa_db;
+    CREATE USER 'dvwa'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Dvwa@1692';
+    GRANT ALL PRIVILEGES ON dvwa_db.* TO 'dvwa'@'localhost' WITH GRANT OPTION;
+    DROP user dvwa@localhost;
    sudo vim /etc/php/7.4/apache2/php.ini
    allow_url_include = on
    allow_url_fopen = on
