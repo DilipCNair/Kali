@@ -4,6 +4,7 @@ echo 2 | sudo tee /proc/sys/kernel/randomize_va_space     // To enable ASLR
 
 sudo apt install gcc-multilib g++-multilib      // To compile for 32 bit binary 
 
+//In root mode compile the program and set SUID by typing the command chmod u+s meet
 gcc -g -o 'sourcefilename.c' 'outputfilename'     // g for debugging symbols and o for output filename
 gcc meet.c -o meet -mpreferred-stack-boundary=2 -fno-stack-protector -z execstack -g -m32       // For 32 bit binary
 gcc meet.c -o meet -fno-stack-protector -z execstack -g        // for easy buffer overflow attack, default 64 -m64 can also be used
