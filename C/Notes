@@ -1,17 +1,17 @@
 
-echo 0 | sudo tee /proc/sys/kernel/randomize_va_space // To disable ASLR
-echo 2 | sudo tee /proc/sys/kernel/randomize_va_space // To enable ASLR
+echo 0 | sudo tee /proc/sys/kernel/randomize_va_space     // To disable ASLR
+echo 2 | sudo tee /proc/sys/kernel/randomize_va_space     // To enable ASLR
 
-sudo apt install gcc-multilib g++-multilib // To compile for 32 bit binary 
+sudo apt install gcc-multilib g++-multilib      // To compile for 32 bit binary 
 
-gcc -g -o 'sourcefilename.c' 'outputfilename'  // g for debugging symbols and o for output filename
-gcc meet.c -o meet -mpreferred-stack-boundary=2 -fno-stack-protector -z execstack -g -m32 // For 32 bit binary
-gcc meet.c -o meet -fno-stack-protector -z execstack -g // for easy buffer overflow attack, default 64 -m64 can also be used
+gcc -g -o 'sourcefilename.c' 'outputfilename'     // g for debugging symbols and o for output filename
+gcc meet.c -o meet -mpreferred-stack-boundary=2 -fno-stack-protector -z execstack -g -m32       // For 32 bit binary
+gcc meet.c -o meet -fno-stack-protector -z execstack -g        // for easy buffer overflow attack, default 64 -m64 can also be used
 
 
-gdb -q 'outputfilename' //q for not printing version
-run // to run the debugger
-q // to quit
+gdb -q 'outputfilename'       //q for not printing version
+run         // to run the debugger
+q      // to quit
 
 
 info reg rip|eip|pc
@@ -19,9 +19,15 @@ info reg rbp|ebp
 info reg rsp|esp
 info frame
 
+b <line number> // To insert break point
+b <function name>
+clear // To delete breakpoints
+delete // To delete breakpoints
+
 set disassembly-flavor <intel/att>
 disassemble <function name>
 list
+
 
 x/400x $sp - 500 // Memmory data organised from low address to higher address Big Endian Form
 
