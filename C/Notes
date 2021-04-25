@@ -6,7 +6,7 @@ sudo apt install gcc-multilib g++-multilib // To compile for 32 bit binary
 
 gcc -g -o 'sourcefilename.c' 'outputfilename'  // g for debugging symbols and o for output filename
 gcc meet.c -o meet -mpreferred-stack-boundary=2 -fno-stack-protector -z execstack -g -m32 // For 32 bit binary
-gcc meet.c -o meet -fno-stack-protector -z execstack -g // for easy buffer overflow attack -  default 64 -m64 can also be used
+gcc meet.c -o meet -fno-stack-protector -z execstack -g // for easy buffer overflow attack, default 64 -m64 can also be used
 
 
 gdb -q 'outputfilename' //q for not printing version
@@ -14,7 +14,7 @@ run // to run the debugger
 q // to quit
 
 
-info reg rip|pc
+info reg rip|eip|pc
 info reg rbp|ebp
 info reg rsp|esp
 info frame
