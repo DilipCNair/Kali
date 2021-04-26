@@ -63,7 +63,8 @@ Setting up LAMP
 
    wordpress username - dilipw6
    wordpress password - vA)jn$jgWv^kMnTBt2
-
+   
+   DROP DATABSE wp_database;
 
 
 
