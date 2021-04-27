@@ -58,13 +58,18 @@ Setting up LAMP
    Wordpress setup
    Download the wordpress from the official wordpress.org website and put in in document root and give permissions and load it
    run the setup
+      CREATE DATABASE wp_database;
+      CREATE USER 'wp_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Password@1692';
+      GRANT ALL PRIVILEGES ON wp_database.* TO 'wp_user'@'localhost' WITH GRANT OPTION;
+      
    Mysql - username : wp_user
    mysql - password : Password@1692
 
    wordpress username - dilipw6
-   wordpress password - vA)jn$jgWv^kMnTBt2
+   wordpress password - 6i(lZsdFE5VaikM*m%
    
    DROP DATABSE wp_database;
+   DROP user wp_user@localhost;
 
 
 
