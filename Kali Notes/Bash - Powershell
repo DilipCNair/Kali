@@ -3,7 +3,7 @@ Bash                                    Powershell
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bash --version                          Get-Host
 neofetch                                Get-ComputerInfo
-compgen -c                              Get-Command
+compgen -c                              Get-Command -CommandType cmdlet
 man <any_command>                       Get-Help <any_command> or man or help
 echo <message>                          Write-Host "message" or echo
 sudo                                    Open powershell in admin mode
