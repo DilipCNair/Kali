@@ -28,5 +28,6 @@ grep                                    Select-String
 set or env                              Get-Childitem env:
 reboot                                  Restart-Computer
 shutdown                                Stop-Computer
+echo "$PATH"                            $Env:Path
 
 
